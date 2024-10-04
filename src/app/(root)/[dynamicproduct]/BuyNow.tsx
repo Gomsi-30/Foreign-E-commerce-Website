@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 import Login from '../_components/authenticate/login';
-import Signup from '../_components/authenticate/signup'; // Assuming you have a Signup component
+import Signup from '../_components/authenticate/signup'; 
 import { useRouter } from 'next/navigation';
 
 const BuyButton: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
-  const [showSignupModal, setShowSignupModal] = useState<boolean>(false); // State for signup modal
+  const [showSignupModal, setShowSignupModal] = useState<boolean>(false); 
   const auth = getAuth();
   const router = useRouter();
 
@@ -21,7 +21,6 @@ const BuyButton: React.FC = () => {
     return () => unsubscribe();
   }, [auth]);
 
-  // Handle Buy Now button click
   const handleBuyNowClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isAuthenticated) {
       e.preventDefault();

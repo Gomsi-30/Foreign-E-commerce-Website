@@ -144,7 +144,7 @@ const Signup: React.FC<SignupProps> = ({ openLoginModal,name='Signup Here' }) =>
                 onClick={openLoginModal}
                 className="text-pink-500 hover:text-pink-600"
               >
-                Login here
+                Login
               </button>
             </p>
           </div>

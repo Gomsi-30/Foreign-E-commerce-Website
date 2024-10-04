@@ -42,7 +42,23 @@ const Wishlist = () => {
       <h2 className="text-3xl font-bold mt-10">My Wishlist</h2>
 
       {wishlist.length === 0 ? (
-        <p className="text-gray-500 text-lg">Your wishlist is empty.</p>
+       <div className='flex flex-col justify-center items-center '>
+       <div className='flex flex-col justify-center items-center mt-10'>
+         <div className="relative h-[300px] w-[350px]">
+           <Image
+             src="/noresults.png"
+             alt="No Orders"
+             fill
+             className='object-cover object-center'
+           />
+           <div className='absolute bottom-[-22px] p-2 mb-8 left-1/2 transform -translate-x-1/2 rounded-md font-medium text-center bg-white whitespace-nowrap'>
+             Hmm, It Seems Empty Here
+           </div>
+         </div>
+         <Link href='/' className='p-2 px-2 mb-8 bg-black rounded-md text-white font-medium w-auto'>Go to Homepage</Link>
+       </div>
+     </div>
+     
       ) : (
         <div className="space-y-6 mt-8">
           {wishlist.map((product: Product): JSX.Element => (
@@ -50,7 +66,6 @@ const Wishlist = () => {
               key={product.id}
               className="flex items-center bg-white shadow-lg rounded-lg p-4 space-x-4"
             >
-             
               <div className="relative w-24 h-24"> 
                 <Image
                   src={product.image}
@@ -61,7 +76,6 @@ const Wishlist = () => {
                 />
               </div>
 
-        
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-blue-600 hover:underline">
                   <Link href={`/${formatTitleForUrl(product.name)}`}>
@@ -69,7 +83,6 @@ const Wishlist = () => {
                   </Link>
                 </h3>
                 <div className="text-sm text-gray-500">
-                 
                   <span className="inline-block bg-green-500 text-white px-2 py-1 rounded text-xs mr-2">
                     {product.rating}★
                   </span>
@@ -100,4 +113,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default Wishlist; 

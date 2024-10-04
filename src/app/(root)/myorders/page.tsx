@@ -2,12 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import ordersData from './orders.json';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "My Orders",
-};
 interface Order {
   product: string;
   orderId: number;
@@ -19,7 +16,6 @@ interface Order {
 }
 
 const OrdersPage: React.FC = () => {
-
   const [filter, setFilter] = useState<string>('7days');
   const [filteredOrders, setFilteredOrders] = useState<Order[]>(ordersData as Order[]);
 
@@ -40,12 +36,10 @@ const OrdersPage: React.FC = () => {
     setFilteredOrders(filtered);
   }, [filter]);
 
-
-    const formatDate = (dateString: string): string => {
-      const date = new Date(dateString);
-      return date.toISOString().split('T')[0]; 
-    };
-
+  const formatDate = (dateString: string): string => {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0]; 
+  };
 
   return (
     <div className="container">
@@ -64,35 +58,54 @@ const OrdersPage: React.FC = () => {
         </select>
       </div>
 
-      {/* Table */}
-      <div className="overflow-x-auto mt-5">
-        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-          <thead>
-            <tr className="bg-indigo-50">
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Product</th>
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Order ID</th>
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Payment Status</th>
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Amount</th>
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Address</th>
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Order Date</th>
-              <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredOrders.map((order: Order, index: number) => (
-              <tr key={index} className="hover:bg-gray-100 transition-all duration-200">
-                <td className="py-4 px-6 border-b text-gray-800">{order.product}</td>
-                <td className="py-4 px-6 border-b text-gray-800">{order.orderId}</td>
-                <td className="py-4 px-6 border-b text-gray-800">{order.paymentStatus}</td>
-                <td className="py-4 px-6 border-b text-gray-800">${order.amount}</td>
-                <td className="py-4 px-6 border-b text-gray-800">{order.address}</td>
-                <td className="py-4 px-6 border-b text-gray-800">{formatDate(order.orderDate)}</td>
-                <td className="py-4 px-6 border-b text-gray-800">{order.status}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Table or Full-Screen Image */}
+      {filteredOrders.length === 0 ? (
+        <div className='flex flex-col justify-center items-center '>
+        <div className='flex flex-col justify-center items-center mt-10'>
+          <div className="relative h-[300px] w-[350px]">
+            <Image
+              src="/noresults.png"
+              alt="No Orders"
+              fill
+              className='object-cover object-center'
+            />
+            <div className='absolute bottom-[-22px] p-2 mb-8 left-1/2 transform -translate-x-1/2 rounded-md font-medium text-center bg-white whitespace-nowrap'>
+              Hmm, It Seems Empty Here
+            </div>
+          </div>
+          <Link href='/' className='p-2 px-2 mb-8 bg-black rounded-md text-white font-medium w-auto'>Go to Homepage</Link>
+        </div>
       </div>
+      ) : (
+        <div className="overflow-x-auto mt-5">
+          <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+            <thead>
+              <tr className="bg-indigo-50">
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Product</th>
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Order ID</th>
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Payment Status</th>
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Amount</th>
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Address</th>
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Order Date</th>
+                <th className="py-3 px-6 text-left text-sm font-medium text-gray-700">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredOrders.map((order: Order, index: number) => (
+                <tr key={index} className="hover:bg-gray-100 transition-all duration-200">
+                  <td className="py-4 px-6 border-b text-gray-800">{order.product}</td>
+                  <td className="py-4 px-6 border-b text-gray-800">{order.orderId}</td>
+                  <td className="py-4 px-6 border-b text-gray-800">{order.paymentStatus}</td>
+                  <td className="py-4 px-6 border-b text-gray-800">${order.amount}</td>
+                  <td className="py-4 px-6 border-b text-gray-800">{order.address}</td>
+                  <td className="py-4 px-6 border-b text-gray-800">{formatDate(order.orderDate)}</td>
+                  <td className="py-4 px-6 border-b text-gray-800">{order.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
