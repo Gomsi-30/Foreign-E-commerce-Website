@@ -1,5 +1,9 @@
 import Banner from '../_components/global/banner'
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: "Our Story",
+};
 const OurStory = ()=> {
    return (
      <div className='flex flex-col gap-[60px] mt-[-30px]'>

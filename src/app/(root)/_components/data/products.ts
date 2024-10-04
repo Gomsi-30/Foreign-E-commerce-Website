@@ -18,7 +18,7 @@ export type Product = {
 export const products = [
   {
     id: 1,
-    name: "Rose Gold Diamond Ring",
+    name: "HD Camera Neon",
     price: "$99",
     quantity:1,
     category: 'Earrings',
@@ -31,6 +31,11 @@ export const products = [
         "Perfect for sensitive skin",
         "Length of chain: 44 cm + 5 cm Adjustable",
         "Comes with the GIVA Jewellery kit",
+        "Brand: Trulyroselle",
+        "Collection: Bestseller",
+        "Gender: Women",
+        "Product Type: PLAIN GOLD",
+        "Occasion: Casual wear"
       ],
       shipping: [
         "Free express shipping",
@@ -41,11 +46,11 @@ export const products = [
   },
   {
     id: 2,
-    name: "Natural Honey Bottle",
+    name: "Mac Book Air",
     price: "$99",
     quantity:1,
     category: 'Earrings',
-    image: "/categories/1.jpg",
+    image: "/categories/lap.jpg",
     description: "Indulge in the dainty yet captivating allure that makes a sleek style statement with these drop earrings in 22 karat yellow gold.",
     details: {
       inspiration: "Pure natural honey...",
@@ -63,11 +68,11 @@ export const products = [
   },
   {
       id: 3,
-      name: "Natural Honey Bottle",
+      name: "Buggati Veyron 165",
       price: "$99",
       quantity:1,
       category: 'Accessories',
-      image: "/categories/1.jpg",
+      image: "/categories/car.jpg",
       description: "Indulge in the dainty yet captivating allure that makes a sleek style statement with these drop earrings in 22 karat yellow gold.",
       details: {
         inspiration: "Pure natural honey...",
@@ -85,11 +90,11 @@ export const products = [
     },
     {
       id: 4,
-      name: "Natural Honey Bottle",
+      name: "Puma Star Football",
       price: "$99",
       quantity:1,
       category: 'Watches',
-      image: "/categories/1.jpg",
+      image: "/categories/foot.jpg",
       description: "Indulge in the dainty yet captivating allure that makes a sleek style statement with these drop earrings in 22 karat yellow gold.",
       details: {
         inspiration: "Pure natural honey...",
@@ -107,11 +112,11 @@ export const products = [
     },
     {
       id: 5,
-      name: "Natural Honey Bottle",
+      name: "Earrings with Gold",
       price: "$99",
       quantity:1,
       category: 'Anklets',
-      image: "/categories/1.jpg",
+      image: "/categories/ear.jpg",
       description: "Indulge in the dainty yet captivating allure that makes a sleek style statement with these drop earrings in 22 karat yellow gold.",
       details: {
         inspiration: "Pure natural honey...",
@@ -129,11 +134,11 @@ export const products = [
     },
     {
       id: 6,
-      name: "Natural Honey Bottle",
+      name: "Rolex Watch 12",
       price: "$99",
       quantity:1,
       category: 'Anklets',
-      image: "/categories/1.jpg",
+      image: "/categories/wat.jpg",
       description: "Indulge in the dainty yet captivating allure that makes a sleek style statement with these drop earrings in 22 karat yellow gold.",
       details: {
         inspiration: "Pure natural honey...",

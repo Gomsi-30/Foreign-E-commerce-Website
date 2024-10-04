@@ -9,7 +9,7 @@ const Reviews = () => {
           id: 1,
           name: "Rose Gold Diamond Ring",
           price: "$99",
-          image: "/categories/1.png",
+          image: "/categories/a.jpg",
           description: "This is a beautiful rose gold diamond ring.",
           details: {
             inspiration: "Circle up your beautiful journey...",
@@ -30,7 +30,7 @@ const Reviews = () => {
           id: 2,
           name: "Natural Honey Bottle",
           price: "$99",
-          image: "/categories/2.png",
+          image: "/categories/b.jpg",
           description: "A premium quality honey bottle.",
           details: {
             inspiration: "Pure natural honey...",
@@ -50,7 +50,7 @@ const Reviews = () => {
             id: 3,
             name: "Natural Honey Bottle",
             price: "$99",
-            image: "/categories/3.png",
+            image: "/categories/c.jpg",
             description: "A premium quality honey bottle.",
             details: {
               inspiration: "Pure natural honey...",
@@ -70,7 +70,7 @@ const Reviews = () => {
             id: 4,
             name: "Natural Honey Bottle",
             price: "$99",
-            image: "/categories/2.png",
+            image: "/categories/d.jpg",
             description: "A premium quality honey bottle.",
             details: {
               inspiration: "Pure natural honey...",
@@ -90,7 +90,7 @@ const Reviews = () => {
             id: 5,
             name: "Natural Honey Bottle",
             price: "$99",
-            image: "/categories/3.png",
+            image: "/categories/a.jpg",
             description: "A premium quality honey bottle.",
             details: {
               inspiration: "Pure natural honey...",
@@ -110,7 +110,7 @@ const Reviews = () => {
             id: 6,
             name: "Natural Honey Bottle",
             price: "$99",
-            image: "/categories/1.png",
+            image: "/categories/b.jpg",
             description: "A premium quality honey bottle.",
             details: {
               inspiration: "Pure natural honey...",

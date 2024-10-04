@@ -97,12 +97,12 @@ const Shipping = () => {
                       alt={item.name}
                       width={100}
                       height={100}
-                      className="rounded-md"
+                      className="rounded-md object-cover object-center"
                     />
                     <div className="flex-1">
                       <h2 className="font-semibold text-lg">{item.name}</h2>
                       <p className="text-gray-500">Quantity: {item.quantity}</p>
-                      <p className="text-pink-500 font-semibold">₹ {item.price.toLocaleString()}</p>
+                      <p className="text-pink-500 font-semibold">{item.price.toLocaleString()}</p>
                       <div className="mt-2 flex gap-4 text-sm">
                         <button
                           className="text-red-500"

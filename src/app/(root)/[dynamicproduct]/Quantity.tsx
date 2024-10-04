@@ -6,9 +6,9 @@ const Quantity = ()=> {
     return (
         
         <div className='flex flex-row gap-2.5 items-center mt-2'>
-           <div className=' rounded-full flex justify-center items-center bg-gray-100 '><button ><CiCircleMinus size={22}/></button></div>
-           <p>1</p>
-           <div className='rounded-full flex justify-center items-center bg-gray-100'><button ><CiCirclePlus size={22}/></button></div>
+           <div className=' rounded-full flex justify-center items-center bg-gray-100'><button ><CiCircleMinus size={27}/></button></div>
+           <p className='text-xl font-semibold'>1</p>
+           <div className='rounded-full flex justify-center items-center bg-gray-100'><button ><CiCirclePlus size={27}/></button></div>
         </div>
         
     )

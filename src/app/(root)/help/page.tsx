@@ -1,7 +1,11 @@
 import { FiMessageSquare } from "react-icons/fi";
 import { IoCallOutline } from "react-icons/io5";
 import Link from 'next/link';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: "Help",
+};
 export default function HelpContact() {
     return (
       <div className="flex flex-col items-center py-12 h-full">

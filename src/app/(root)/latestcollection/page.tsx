@@ -1,5 +1,9 @@
 import ProductList from '../_components/products/productList'
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: "Latest Collection",
+};
 const Latest = ()=> {
   return (
     <div className='container'>

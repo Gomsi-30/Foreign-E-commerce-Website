@@ -1,4 +1,9 @@
 import Similar from '../_components/global/similar'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Favourites",
+};
 const Favourite = ()=> {
     return (
         <div>

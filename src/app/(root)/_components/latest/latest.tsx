@@ -10,14 +10,13 @@ const Latest = () => {
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 h-full">
         {products.map((product) => (
           <Link href={`/${product.name.replace(/\s+/g, '-')}`} key={product.id}>
-            <div className="relative overflow-hidden w-full h-auto cursor-pointer">
+            <div className="relative w-full h-[350px] overflow-hidden cursor-pointer">
               <Image
                 alt={product.name}
                 src={product.image}
-                width={369}
-                height={240}
-                layout="responsive"
-                className="w-full h-auto"
+                layout="fill" // Fill the container
+                objectFit="cover" // Ensures consistent size and covers the container
+                className="rounded-md"
               />
             </div>
           </Link>

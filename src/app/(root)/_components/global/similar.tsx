@@ -1,70 +1,13 @@
 import Link from 'next/link';
 import AddToCartButton from './AddToCartButton';
 import Image from 'next/image';
+import { products as product } from '../data/products';
+
 type SimilarProps = {
     heading: string;
     para: string;
     button: string;
 };
-
-const product = [
-    {
-        id: 1,
-        name: "Rings",
-        price: "$99",
-        image: "/categories/3.png",
-        category: "Rings",
-        description: "This is a beautiful rose gold diamond ring.",
-        details: {
-            inspiration: "Circle up your beautiful journey...",
-            design: [
-                "925 Silver with Rose Gold Plating",
-                "Perfect for sensitive skin",
-                "Length of chain: 44 cm + 5 cm Adjustable",
-                "Comes with the GIVA Jewellery kit",
-            ],
-            shipping: [
-                "Free express shipping",
-                "30 days return policy",
-                "6 month warranty",
-            ],
-        },
-    },
-    {
-        id: 2,
-        name: "Accessories",
-        price: "$99",
-        image: "/categories/1.png",
-        category: "Accessories",
-        description: "A premium quality honey bottle.",
-        details: {
-            inspiration: "Pure natural honey...",
-            design: [
-                "100% organic honey",
-                "Free from preservatives",
-                "500ml glass bottle",
-            ],
-            shipping: [
-                "Free express shipping",
-                "No questions asked 30 days return policy",
-                "Shipping internationally to 20+ countries",
-            ],
-        },
-    },
-    {
-        id: 3,
-        name: "Accessories",
-        price: "$50",
-        image: "/categories/2.png",
-        category: "Accessories",
-        description: "A set of beautiful earrings.",
-        details: {
-            inspiration: "Delicate earrings...",
-            design: ["Gold plated", "Perfect for sensitive skin"],
-            shipping: ["Free shipping", "30 days return policy"],
-        },
-    },
-];
 
 const Similar = ({ heading, para, button }: SimilarProps) => {
     return (

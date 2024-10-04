@@ -32,24 +32,30 @@ const ProductSlider = () => {
       </button>
   
       {/* Products Slider */}
-      <div ref={sliderRef} className="flex pl-2 overflow-x-scroll gap-5 no-scrollbar scroll-smooth">
-        {products.map((product) => (
-          <div key={product.id} className="min-w-[310px] rounded-md flex-shrink-0">
-            <Link href={`/${product.name.replace(/\s+/g, '-')}`}>
-              <Image 
-                src={product.image} 
-                alt={product.name} 
-                width={310} // Set the desired width
-                height={192} // Set the desired height (for a 48px height)
-                className="rounded-md cursor-pointer" 
-              />
-              <h2 className="text-xl font-semibold mt-2 cursor-pointer">{product.name}</h2>
-            </Link>
-            <p className="text-gray-700 font-semibold">Price: {product.price}</p>
-            <AddToCartButton product={product} big={true} />
-          </div>
-        ))}
-      </div>
+      <div ref={sliderRef} className="flex pl-2 overflow-x-scroll gap-6 no-scrollbar scroll-smooth">
+  {products.map((product) => (
+    <div 
+      key={product.id} 
+      className="min-w-[310px] h-[350px] rounded-md flex-shrink-0 flex flex-col justify-between"
+    >
+      <Link href={`/${product.name.replace(/\s+/g, '-')}`}>
+        <div className="relative w-[310px] h-[222px]">
+          <Image 
+            src={product.image} 
+            alt={product.name} 
+            layout="fill" // Fill the parent container
+            objectFit="cover" // Maintain aspect ratio, crop if necessary
+            className="rounded-md cursor-pointer"
+          />
+        </div>
+        <h2 className="text-xl font-semibold mt-2 cursor-pointer">{product.name}</h2>
+      </Link>
+      <p className="text-gray-700 text-lg font-semibold mb-1">Price: {product.price}</p>
+      <div className='mb-2'><AddToCartButton product={product} big={true} /></div>
+    </div>
+  ))}
+</div>
+
   
       <button 
         className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10" 

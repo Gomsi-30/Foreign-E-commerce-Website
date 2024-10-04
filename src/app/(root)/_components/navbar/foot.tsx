@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
-import { FaInstagramSquare, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagramSquare, FaLinkedin, FaYoutubeSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import Image from 'next/image'; 
 
@@ -40,9 +40,9 @@ const Footer = () => {
             <Image 
               src="/logo.png" 
               alt="Trulyroselle Logo" 
-              width={96}
-              height={24} 
-              className="w-24" 
+              width={137}
+              height={49} 
+              className="w-31" 
             />
 
             <p>Sign up for our newsletter</p>
@@ -72,11 +72,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center w-full justify-center md:w-[55%]">
-          <div className="grid grid-cols-2 sm:grid-cols-3 w-full gap-6 md:mt-8">
+        <div className="flex flex-col w-full md:gap-5 md:w-[55%]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 w-full gap-6 md:mt-8  justify-center">
             <div className="space-y-2">
               <ul className="space-y-2 font-semibold">
-                <li><a href="/" className="hover:text-pink-600">Home</a></li>
+                <li><a href="/" className="hover:text-pink-600 text-left">Home</a></li>
                 <li><a href="/latestcollection" className="hover:text-pink-600">Latest Collections</a></li>
                 <li><a href="#" className="hover:text-pink-600">Men&apos;s Jewellery</a></li>
                 <li><a href="/gifts" className="hover:text-pink-600">Gifts</a></li>
@@ -102,11 +102,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-row gap-2 sm:gap-5 mt-12 sm:mt-7">
+          <div className="flex flex-row gap-2  md:px-[218px] sm:gap-5 mt-12 sm:mt-7">
             <FaInstagramSquare size={26} className="hover:text-pink-600 cursor-pointer" />
             <FaSquareXTwitter size={26} className="hover:text-pink-600 cursor-pointer" />
             <FaLinkedin size={26} className="hover:text-pink-600 cursor-pointer" />
-            <FaGithub size={26} className="hover:text-pink-600 cursor-pointer" />
+            <FaYoutubeSquare size={26} className="hover:text-pink-600 cursor-pointer" />
           </div>
         </div>
       </div>

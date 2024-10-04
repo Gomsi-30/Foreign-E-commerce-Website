@@ -1,0 +1,49 @@
+{
+  "averageRating": 4.1,
+  "totalRatings": 2987,
+  "totalReviews": 154,
+  "customerSentiments": ["Fabric Quality", "Colour", "Style", "Comfort", "True to Specs", "Stitching Quality"],
+  "reviews": [
+    {
+      "rating": 5,
+      "review": "Superb Quality Shorts. Very Comfortable for Gym. Fabric is Super soft. It looks very good on Me. Thank You Flipkart!!",
+      "images": [
+        "/categories/car.jpg",
+        "/categories/ear.jpg",
+        "/categories/lap.jpg"
+      ],
+      "customer": "Flipkart Customer",
+      "date": "Aug, 2023",
+      "verified": true,
+      "location": "New Delhi",
+      "helpful": 23,
+      "notHelpful": 5
+    },
+    {
+      "rating": 1,
+      "review": "Nice 👍 product",
+      "images": [
+        "/categories/foot.jpg"
+      ],
+      "customer": "Kowsar Ahmed",
+      "date": "11 months ago",
+      "verified": true,
+      "location": "Karimganj District",
+      "helpful": 24,
+      "notHelpful": 11
+    },
+    {
+      "rating": 3,
+      "review": "Nice 👍 product",
+      "images": [
+        "/categories/wat.jpg"
+      ],
+      "customer": "Vicky Ahmed",
+      "date": "2 months ago",
+      "verified": true,
+      "location": "Dugada District",
+      "helpful": 24,
+      "notHelpful": 11
+    }
+  ]
+}

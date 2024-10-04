@@ -11,9 +11,10 @@ import { Product } from '../data/products';
 interface AddToCartButtonProps {
   product: Product;
   big?: boolean; 
+  color?:boolean;
 }
 
-const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product, big = false }) => {
+const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product, big = false,color=false }) => {
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector((state) => state.cart.cartItems);
 
@@ -28,7 +29,7 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product, big = false 
   };
 
   return (
-    <div className={`flex mt-2 flex-row justify-center whitespace-nowrap font-semibold items-center gap-3 bg-pink-500 text-white text-sm py-2 px-4 rounded-md ${big ? 'w-full' : 'w-[40%]'}`}>
+    <div className={`flex mt-2 flex-row justify-center whitespace-nowrap font-semibold items-center gap-3 ${color ? 'bg-white text-black border border-[1px] border-black' : 'bg-pink-500 text-white'} text-md py-3 px-4 rounded-md ${big ? 'w-full' : 'w-[40%]'}`}>
       {isProductInCart ? (
         <Link href='/cart' className="flex items-center gap-2">
           <h1>GO TO CART</h1>
